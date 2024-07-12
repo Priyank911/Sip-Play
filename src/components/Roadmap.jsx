@@ -1,78 +1,71 @@
+import React from "react";
 import Button from "./Button";
 import Heading from "./Heading";
 import Section from "./Section";
-import Tagline from "./Tagline";
-import { roadmap } from "../constants";
-import { check2, grid, loading1 } from "../assets";
-import { Gradient } from "./design/Roadmap";
 
-const Roadmap = () => (
-  <Section className="overflow-hidden" id="roadmap">
-    <div className="container md:pb-10">
-      <Heading tag="Ready to get started" title="What we’re working on" />
+const gamesList = [
+  "13 Days",
+  "20 second showdown",
+  "221B Baker Street",
+  "5 Second Rule",
+  "5 Second Rule: Jr.",
+  "5 Second Rule: Uncensored",
+  "5-Minute Dungeon",
+  "5-Minute MARVEL",
+  "7 Wonders",
+  "7 Wonders: Duel",
+  "8 Minute Empire: Legends",
+  "8 Minute Empire: Lost Lands",
+  "A Game of Thrones: The Board Game",
+  "Above and Below",
+  "Acquire",
+  "Agricola",
+  "Apples to Apples",
+  "Ascension Deck Building Game",
+  "Attack of the killer kittens",
+  "Attack of the killer kittens (NSFW)",
+  "Axis & Allies: Pacific",
+  "Azul: Stained glass of Sintra",
+  "Badmoji",
+  "Bananagrams",
+  "Bang!",
+  "Bang! Dice Expansion: Old Saloon",
+  "Bang! The Dice Game"
+];
 
-      <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
-        {roadmap.map((item) => {
-          const status = item.status === "done" ? "Done" : "In progress";
+const Roadmap = () => {
+  return (
+    <Section className="overflow-hidden" id="roadmap">
+      <div className="container md:pb-10 text-black">
+        <Heading tag="Ready to Play" title="Our Board Games" />
 
-          return (
-            <div
-              className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${
-                item.colorful ? "bg-conic-gradient" : "bg-n-6"
-              }`}
-              key={item.id}
-            >
-              <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
-                <div className="absolute top-0 left-0 max-w-full">
-                  <img
-                    className="w-full"
-                    src={grid}
-                    width={550}
-                    height={550}
-                    alt="Grid"
-                  />
-                </div>
-                <div className="relative z-1">
-                  <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
-                    <Tagline>{item.date}</Tagline>
+        <div className="mt-12 text-center">
+          <p>Welcome to our collection of board games. Whether you are a seasoned gamer or new to the world of tabletop games, we have something for everyone. Browse through our diverse selection of games listed below.</p>
+        </div>
 
-                    <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
-                      <img
-                        className="mr-2.5"
-                        src={item.status === "done" ? check2 : loading1}
-                        width={16}
-                        height={16}
-                        alt={status}
-                      />
-                      <div className="tagline">{status}</div>
-                    </div>
-                  </div>
+        <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
+          <Button href="/roadmap">Menu</Button>
+        </div>
 
-                  <div className="mb-10 -my-10 -mx-15">
-                    <img
-                      className="w-full"
-                      src={item.imageUrl}
-                      width={628}
-                      height={426}
-                      alt={item.title}
-                    />
-                  </div>
-                  <h4 className="h4 mb-4">{item.title}</h4>
-                  <p className="body-2 text-n-4">{item.text}</p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-
-        <Gradient />
+        <div className="mt-12">
+          <table className="mt-4 table-auto w-full border-collapse border border-black">
+            <thead>
+              <tr>
+                <th className="border border-black px-4 py-2">Games in Alphabetical Order</th>
+              </tr>
+            </thead>
+            <tbody>
+              {gamesList.map((game, index) => (
+                <tr key={index}>
+                  <td className="border border-black px-4 py-2">{game}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button href="/roadmap">Our roadmap</Button>
-      </div>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export default Roadmap;

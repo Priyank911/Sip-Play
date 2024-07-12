@@ -39,35 +39,47 @@ import {
 export const navigation = [
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "About",
+    url: "#hero",
   },
   {
     id: "1",
-    title: "Pricing",
+    title: "Reservation",
     url: "#pricing",
   },
   {
     id: "2",
-    title: "How to use",
-    url: "#how-to-use",
+    title: "MTG Schedule",
+    url: "#Benefits",
   },
   {
     id: "3",
-    title: "Roadmap",
+    title: "Board Game",
     url: "#roadmap",
   },
   {
     id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
+    title: "Menu",
+    url: "#",
+
   },
   {
     id: "5",
-    title: "Sign in",
-    url: "#login",
-    onlyMobile: true,
+    title: "Feedback",
+    url: "https://www.sipnplaynyc.com/feedback",
+  
+  },
+  {
+    id: "6",
+    title: "Gift Card",
+    url: "https://squareup.com/gift/SWP5P3242C38Q/order",
+
+  },
+  {
+    id: "7",
+    title: "Press",
+    url: "https://www.sipnplaynyc.com/press",
+
   },
 ];
 
@@ -207,36 +219,24 @@ export const collabApps = [
 
 export const pricing = [
   {
-    id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
-    features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
-    ],
-  },
-  {
     id: "1",
-    title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "9.99",
+    title: "Reserved",
+    description: "All reservations can be made on our new site",
+    price: "15/Person",
     features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
+      "We have just started using a new reservation software",
+      "Tock! Reservations are $15 a person for 3 hours of game time",
     ],
   },
   {
     id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
+    title: "Birthday Packages",
+    description: "Renting entire backroom",
+    price: "350/3hr",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "$350 for 3 hours of game time all to your party!",
+      "$550 Basic Birthday Package: Backroom, pizza, soda included. +$30 per extra guest beyond ten.",
+      "$700 Premium Birthday Package: Backroom, pizza, soda, unlimited bubble tea, appetizers, Sip & Play goodie bag!",
     ],
   },
 ];
@@ -296,33 +296,15 @@ export const benefits = [
 
 export const socials = [
   {
-    id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
-  },
-  {
-    id: "1",
-    title: "Twitter",
-    iconUrl: twitter,
-    url: "#",
-  },
-  {
     id: "2",
     title: "Instagram",
     iconUrl: instagram,
-    url: "#",
-  },
-  {
-    id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
+    url: "https://www.instagram.com/sipnplaynyc",
   },
   {
     id: "4",
     title: "Facebook",
     iconUrl: facebook,
-    url: "#",
+    url: "https://www.facebook.com/sipnplaynyc/",
   },
 ];
